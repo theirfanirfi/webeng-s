@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home page</title>
+
+
+<style>
+#body {
+	display: grid;
+	grid-template-columns: minmax(100px, auto);
+	grid-template-rows: minmax(150px, auto);
+	grid-gap: 20px;
+	grid-template-areas: "header header" "sidebar content";
+}
+.box {
+	width: 100%;
+	height: 200px;
+	background-color: green;
+	border: 1px solid black;
+}
+
+.one {
+	grid-area: header header;
+	grid-column: span 2;
+/*	grid-column-start: 1;*/
+/*	grid-column-end: -1;*/
+}
+.two {
+	grid-area: sidebar;
+
+}
+
+.three {
+	grid-area: content;
+	
+}
+
+.four {
+grid-area: content;
+}
+
+</style>
+
+</head>
+<body>
+
+	<header>
+		
+
+	</header>
+	<section id="body">
+
+<section class="box one"><h3>Box 1</h3></section>
+	<section class="box two"><h3>Box 2</h3></section>
+	<section class="box three"><h3>Box 3</h3></section>
+	<section class="box four"><h3>Box 4</h3></section>
+	<!-- <section class="box "><h3>Box 5</h3></section>
+	<section class="box "><h3>Box 6</h3></section>
+	<section class="box "><h3>Box 7</h3></section>
+	<section class="box "><h3>Box 8</h3></section>
+	<section class="box "><h3>Box 9</h3></section>
+	<section class="box "><h3>Box 10</h3></section>
+	<section class="box "><h3>Box 11</h3></section>
+	<section class="box "><h3>Box 12</h3></section> -->
+
+
+<!-- 	<section class="box"></section>
+	<section class="box"></section> -->
+		
+
+	</section>
+	<footer></footer>
+
+</body>
+</html>

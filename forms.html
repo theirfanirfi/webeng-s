@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Forms</title>
+</head>
+<body>
+
+	<form method="post" name="student_detail">
+		
+		<fieldset>
+			<legend>Details</legend>
+
+			<p>
+				<label>Student Name: </label>
+				<input type="text" name="student_name" placeholder="Student Name">
+			</p>
+
+						<p>
+				<label>Password: </label>
+				<input type="email" name="student_name" placeholder="Student Name">
+			</p>
+
+			<p>
+				<label>Roll Number: </label>
+				<input type="number" id="rollnumber" placeholder="Roll Number" />
+			</p>
+
+			<p>
+				<label>Select Course</label>
+				<select id="select_course">
+					<option value="Web Engineering">Web Engineering</option>
+					<option value="Process Mining">Process Mining</option>
+				</select>
+			</p>
+<!-- 			<p>
+				<label>Student description</label>
+				<textarea name="student_descriptoin" cols="50" rows="50">
+					
+				</textarea>
+			</p> -->
+
+			<!-- <input type="button" onclick="return submit_form(this);"  value="Submit Form" /> -->
+
+
+
+			<input type="text" name="city" list="cities" />
+
+			<datalist id="cities">
+				<option>Islamabad</option>
+				<option>Lahore</option>
+				<option>Peshawar</option>
+				<option>Quetta</option>
+			</datalist>
+		</fieldset>
+
+	</form>
+
+
+<script>
+	function submit_form(e){
+		var student_name = document.getElementById('student_name');
+		var rollnumber = document.getElementById('rollnumber');
+		var selectCourse = document.getElementById('select_course');
+		console.log(student_name.value);
+		console.log(rollnumber.value);
+		console.log(selectCourse.value);
+		return false;
+	}
+</script>
+
+</body>
+</html>
