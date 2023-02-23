@@ -17,7 +17,8 @@ var tbody = document.getElementById("tbody");
 
 
 function deleteStudent(index){
-	students = students.splice(index, index);
+	students.splice(index, 1);
+	console.log(x)
 
 	renderStudents();
 }
