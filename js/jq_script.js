@@ -32,30 +32,31 @@ let students = [];
 
 $(document).ready(function(){
 
-var studentName = $('#studentName');
-var rollNumber = $('#rollNumber');
+	$('#btn').click((e) => {
 
-$('#rollNumber').on('keyup', function(e){
-	console.log(typeof($(this).val()));
-	if(e.key == "Enter"){
-		$(this).prev('label').text('valid input').css({
-			"color": "green",
-			"font-weight": "bold",
+		$.ajax({
+			url: "https://jsonplaceholder.typicode.com/todos/kkd/1",
+			method: "get",
+
+			success: (data) => {
+				console.log(data);
+			},
+			error: (error) => {
+				console.log('error: '+error);
+			}
 		});
-	}
-});
+// 		$.get('https://jsonplaceholder.typicode.com/todos/', function(data){
+// $('#tbody').html("");
 
-// $('#btn').on('', function(){
-// 	students.push({
-// 		"rollNumber": rollNumber.val(),
-// 		"studentName": studentName.val(),
-// 	});
+// 			data.map((obj) => {
+
+// 			$('#tbody').append("<tr><td>"+obj.id+"</td><td>"+obj.title+"</td></tr>");
+
+// 			})
 
 
-// 	$('table').addClass('table-primary').removeClass('table-bordered');
-// 	$('#tbody').append("<tr><td>"+rollNumber.val()+"</td><td>"+studentName.val()+"</td></tr>");
-// })
-
+// 		});
+	})
 
 
 });
